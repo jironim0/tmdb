@@ -1,0 +1,1 @@
+export {FilterGenre} from './ui/FilterGenre'

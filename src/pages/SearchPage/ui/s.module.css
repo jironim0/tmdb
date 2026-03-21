@@ -1,0 +1,30 @@
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column
+}
+
+.search__input {
+    border-radius: 25px;
+    max-width: 240px;
+    padding: 12px 16px 12px 16px;
+    font-size: 16px;
+    background-color: wheat;
+    backdrop-filter: blur(25px);
+    border: none;
+    color: black
+}
+
+.search__section {
+    padding-top: 20px;
+    padding-left: 20px;
+    display: flex;
+    gap: 20px
+}
+
+.search__result {
+    padding: 20px;
+    font-size: 22px
+}

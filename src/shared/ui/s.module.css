@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    padding: 20px
+}
+
+.pageInfo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: sans-serif;
+    color: var(--text-color);
+    font-weight: 500
+}

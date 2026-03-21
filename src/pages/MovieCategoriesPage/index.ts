@@ -1,0 +1,1 @@
+export {MovieCategoriesPage} from './ui/MovieCategoriesPage.tsx'

@@ -1,0 +1,1 @@
+export {MovieFilteredListPage} from './ui/MovieFilteredListPage'
