@@ -10,7 +10,7 @@
 ---
 
 ## 📸 Скриншот главной страницы
-`./public/mainPageScreenshot.png`
+![Главная страница](./public/mainPageScreenshot.png)
 
 ---
 
