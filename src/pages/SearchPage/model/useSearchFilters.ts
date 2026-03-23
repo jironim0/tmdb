@@ -7,10 +7,13 @@ export const useSearchFilters = () => {
   const query = searchParams.get("value") || "";
   const page = searchParams.get("page") || 1;
 
-  const { data: movies, isFetching } = useSearchMoviesQuery({
-    value: query,
-    page: Number(page),
-  });
+  const { data: movies, isFetching } = useSearchMoviesQuery(
+    {
+      value: query,
+      page: Number(page),
+    },
+    { skip: !query.trim() }
+)
 
   const getSearchResultLabel = () => {
     if (!query.trim()) return "Enter a movie title to start searching.";
