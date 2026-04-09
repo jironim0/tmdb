@@ -1,6 +1,7 @@
 import { MainBanner } from "@/widgets/MainBanner";
+import { MovieSection } from "@/widgets/movie-section";
+
 import s from "./s.module.css";
-import { MovieSection } from "./MovieSection/MovieSection";
 
 export function MainPage() {
   return (

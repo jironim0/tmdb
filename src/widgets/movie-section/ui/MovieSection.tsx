@@ -1,8 +1,9 @@
-import s from './s.module.css'
 import { useNavigate } from 'react-router';
 import { MoviePoster } from '@/entities/movie/ui/MoviePoster/MoviePoster';
 import { useFetchMoviesByCategoryQuery } from '@/entities/movie/api/moviesApi';
 import { MyButton } from '@/shared/ui/MyButton';
+
+import s from './s.module.css'
 
 interface Props {
   title: string;
