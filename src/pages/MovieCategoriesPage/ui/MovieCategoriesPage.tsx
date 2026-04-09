@@ -1,9 +1,9 @@
 import { useFetchMoviesByCategoryQuery } from "@/entities/movie/api/moviesApi";
 import { MovieList } from "@/widgets/movie-list";
-import { CategorySelector } from "./CategorySelector";
 import { useCategory } from "../model/useCategory";
 
 import s from "./s.module.css";
+import { CategorySelector } from "@/features/category-selector";
 
 export function MovieCategoriesPage() {
   const category = useCategory();

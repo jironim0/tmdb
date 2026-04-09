@@ -7,7 +7,7 @@ export function useSearchNavigation(initialValue: string = "") {
   
   const handleSearch = () => {
     if (inputValue.trim()) {
-      navigate(`/search?value=${encodeURIComponent(inputValue.trim())}&page=1`);
+      navigate(`/search?value=${encodeURIComponent(inputValue)}&page=1`);
     }
   };
 
