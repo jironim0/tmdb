@@ -1,9 +1,11 @@
-import { useMovieFilters } from "@/pages/MovieFilteredListPage/model/useMovieFilter";
-import s from "./s.module.css";
 import { FilterDropDown } from "./FilterDropDown";
 import { FilterRangeInput } from "./FilterRangeInput";
 import { FilterGenre } from "./FilterGenre";
 import { MyButton } from "@/shared/ui/MyButton";
+import type { useMovieFilters } from "@/entities/movie/hooks/useMovieFilter";
+
+import s from "./s.module.css";
+
 
 interface Props {
   filters: ReturnType<typeof useMovieFilters>;

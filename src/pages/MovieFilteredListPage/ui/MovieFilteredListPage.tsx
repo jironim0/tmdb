@@ -4,8 +4,8 @@ import {
 } from "@/entities/movie/api/moviesApi";
 
 import { MovieList } from "@/widgets/movie-list";
-import { useMovieFilters } from "../model/useMovieFilter";
 import { MovieFilters } from "@/widgets/movie-filters";
+import { useMovieFilters } from "@/entities/movie/hooks/useMovieFilter";
 
 export function MovieFilteredListPage() {
   const filters = useMovieFilters();

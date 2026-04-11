@@ -1,7 +1,8 @@
 import { MOVIE_CATEGORIES } from "@/widgets/MainBanner/model/consts";
-import s from "./s.module.css";
-import type { useCategory } from "@/pages/MovieCategoriesPage/model/useCategory";
 import { useNavigate } from "react-router";
+import type { useCategory } from "@/entities/movie/hooks/useCategory";
+
+import s from "./s.module.css";
 
 interface Props {
   category: ReturnType<typeof useCategory>;
