@@ -7,6 +7,7 @@ import {
 } from "@/entities/movie/api/moviesApi";
 import { MyButton } from "@/shared/ui/MyButton";
 import { MovieCard } from "@/features/movie-card";
+import { getImageUrl } from "@/shared/lib/useImage";
 
 const formatRuntime = (totalMinutes: number): string => {
   const hours = Math.floor(totalMinutes / 60);
@@ -27,12 +28,10 @@ export function MovieDetailsPage() {
 
   if (!movie || !credits || !similar) return "Error";
 
-  const width = 300;
-  const height = 450;
-
-  const poster = movie.poster_path
-    ? `${import.meta.env.VITE_IMAGE_BASE_URL}original${movie.poster_path}`
-    : `https://placehold.co/${width}x${height}?text=${encodeURIComponent(movie.original_title)}`;
+  const poster = getImageUrl({
+    imageEndpointUrl: movie.poster_path,
+    originalTitle: movie.original_title,
+  });
 
   return (
     <div className={s.container}>
@@ -66,9 +65,10 @@ export function MovieDetailsPage() {
           .sort((a, b) => b.popularity - a.popularity)
           .slice(0, 6)
           .map((actor) => {
-            const actorPhoto = actor.profile_path
-              ? `${import.meta.env.VITE_IMAGE_BASE_URL}original${actor.profile_path}`
-              : `https://placehold.co/${width}x${height}?text=${encodeURIComponent(actor.original_name)}`;
+            const actorPhoto = getImageUrl({
+              imageEndpointUrl: actor.profile_path,
+              originalTitle: actor.original_name,
+            });
 
             return (
               <div key={actor.id} className={s.actor__card}>

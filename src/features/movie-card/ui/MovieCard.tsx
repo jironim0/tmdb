@@ -3,6 +3,7 @@ import s from "./s.module.css";
 import { useNavigate } from "react-router";
 import { useState } from "react";
 import { FavoriteButton } from "@/features/favorite-button";
+import { getImageUrl } from "@/shared/lib/useImage";
 
 interface Props {
   movie: MovieType | Favorite;
@@ -14,12 +15,10 @@ export function MovieCard({ movie, setIsFavorites, flex }: Props) {
   const navigate = useNavigate();
   const [isFavorite, setIsFavorite] = useState<boolean>(false);
 
-  const width = 300;
-  const height = 450;
-
-  const poster = movie.poster_path
-    ? `${import.meta.env.VITE_IMAGE_BASE_URL}original${movie.poster_path}`
-    : `https://placehold.co/${width}x${height}?text=${encodeURIComponent(movie.original_title)}`;
+  const poster = getImageUrl({
+    imageEndpointUrl: movie.poster_path,
+    originalTitle: movie.original_title,
+  });
 
   const [isHovered, setIsHovered] = useState<boolean>(() => {
     const savedIds = localStorage.getItem("favorites");
